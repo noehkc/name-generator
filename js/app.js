@@ -42,7 +42,9 @@ let url = 'http://uinames.com/api/?';
             html += '<ul class="list">';
             names.forEach(function(name){
 
-                    console.log(name.name.charAt(0));
+                 if(name.name.charAt(0) === "J"){
+                    console.log(name.name);
+                 };
 
 
             });
