@@ -41,15 +41,20 @@ let url = 'http://uinames.com/api/?';
             let html = "<h2>Generated Names</h2>";
             html += '<ul class="list">';
             names.forEach(function(name){
-
-                 if(name.name.charAt(0) === "J"){
-                    console.log(name.name);
-                 };
-
+                 let html = '<h2>Generated Names</h2>';
+                 html += '<ul class="list">';
+                 names.forEach(function(name){
+                    if(name.name.charAt(0) === "J"){
+                        html += `
+                            <li>${name.name}</li>
+                        `
+                        document.querySelector('#result').innerHTML = html;
+                     };
+                 });
 
             });
 
-            document.querySelector('#result').innerHTML = html;
+            
         }
     }
         //Send AJAX Request
