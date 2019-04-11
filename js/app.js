@@ -10,7 +10,7 @@ const genre = document.getElementById('genre').value;
 const amount = document.getElementById('quantity').value;
 
 //build url
-let url = 'http://uinames.com/api/?';
+let url = 'https://uinames.com/api/?';
 
 	//read the origin and append to the url
 	if(origin !== ''){
@@ -23,8 +23,8 @@ let url = 'http://uinames.com/api/?';
     } 
     //read the origin and append to the url
 	if(amount !== ''){
-        url += `amount=${amount}&`;
     } 
+        url += `amount=${amount}&`;
 
         //Ajax Call
     const xhr = new XMLHttpRequest();
